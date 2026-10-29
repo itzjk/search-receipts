@@ -1,0 +1,6 @@
+{"query_id":"tools","result_id":"a","url":"https://example.org/posts/a","text":"I need a tool for this.","text_complete":true,"likes":100,"likes_observed_at":"2026-10-29T12:00:00Z"}
+{"query_id":"tools","result_id":"b","url":"https://example.org/posts/b","text":"We NEED   a tool today.","text_complete":false,"likes":140,"likes_observed_at":"2026-10-29T12:00:00Z"}
+{"query_id":"tools","result_id":"c","url":"https://example.org/posts/c","text":"I need a tool.","text_complete":true,"likes":99,"likes_observed_at":"2026-10-29T12:00:00Z"}
+{"query_id":"tools","result_id":"d","url":"https://example.org/posts/d","text":"Everything is working.","text_complete":true,"likes":180,"likes_observed_at":"2026-10-29T12:00:00Z"}
+{"query_id":"tools","result_id":"e","url":"https://example.org/posts/e","text":"Here is a preview...","text_complete":false,"likes":120,"likes_observed_at":"2026-10-29T12:00:00Z"}
+{"query_id":"tools","result_id":"f","url":"https://example.org/posts/f","text":"I need a tool.","text_complete":true}

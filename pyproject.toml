@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "search-receipts"
+version = "0.1.0"
+description = "Keep a reason for every accepted, rejected, or unverifiable exported search result."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+keywords = ["social-search", "search-quality", "data-quality", "jsonl", "evidence", "cli", "offline"]
+classifiers = ["Programming Language :: Python :: 3", "Environment :: Console"]
+
+[project.urls]
+Repository = "https://github.com/itzjk/search-receipts"
+Issues = "https://github.com/itzjk/search-receipts/issues"
+
+[project.scripts]
+search-receipts = "search_receipts.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+search_receipts = ["examples/*.json", "examples/*.jsonl"]

@@ -1,0 +1,199 @@
+{
+  "rows": [
+    {
+      "query_id": "tools",
+      "result_id": "a",
+      "source": {
+        "query_id": "tools",
+        "result_id": "a",
+        "url": "https://example.org/posts/a",
+        "text": "I need a tool for this.",
+        "text_complete": true,
+        "likes": 100,
+        "likes_observed_at": "2026-10-29T12:00:00Z"
+      },
+      "criteria": [
+        {
+          "criterion": "min_likes",
+          "observed": 100,
+          "rule": 100,
+          "status": "pass",
+          "reason": "Compared supplied counter"
+        },
+        {
+          "criterion": "all_phrases",
+          "observed": "I need a tool for this.",
+          "rule": [
+            "need a tool"
+          ],
+          "status": "pass",
+          "reason": "Phrase present"
+        }
+      ],
+      "classification": "accepted"
+    },
+    {
+      "query_id": "tools",
+      "result_id": "b",
+      "source": {
+        "query_id": "tools",
+        "result_id": "b",
+        "url": "https://example.org/posts/b",
+        "text": "We NEED   a tool today.",
+        "text_complete": false,
+        "likes": 140,
+        "likes_observed_at": "2026-10-29T12:00:00Z"
+      },
+      "criteria": [
+        {
+          "criterion": "min_likes",
+          "observed": 140,
+          "rule": 100,
+          "status": "pass",
+          "reason": "Compared supplied counter"
+        },
+        {
+          "criterion": "all_phrases",
+          "observed": "We NEED   a tool today.",
+          "rule": [
+            "need a tool"
+          ],
+          "status": "pass",
+          "reason": "Phrase present"
+        }
+      ],
+      "classification": "accepted"
+    },
+    {
+      "query_id": "tools",
+      "result_id": "c",
+      "source": {
+        "query_id": "tools",
+        "result_id": "c",
+        "url": "https://example.org/posts/c",
+        "text": "I need a tool.",
+        "text_complete": true,
+        "likes": 99,
+        "likes_observed_at": "2026-10-29T12:00:00Z"
+      },
+      "criteria": [
+        {
+          "criterion": "min_likes",
+          "observed": 99,
+          "rule": 100,
+          "status": "fail",
+          "reason": "Compared supplied counter"
+        },
+        {
+          "criterion": "all_phrases",
+          "observed": "I need a tool.",
+          "rule": [
+            "need a tool"
+          ],
+          "status": "pass",
+          "reason": "Phrase present"
+        }
+      ],
+      "classification": "rejected"
+    },
+    {
+      "query_id": "tools",
+      "result_id": "d",
+      "source": {
+        "query_id": "tools",
+        "result_id": "d",
+        "url": "https://example.org/posts/d",
+        "text": "Everything is working.",
+        "text_complete": true,
+        "likes": 180,
+        "likes_observed_at": "2026-10-29T12:00:00Z"
+      },
+      "criteria": [
+        {
+          "criterion": "min_likes",
+          "observed": 180,
+          "rule": 100,
+          "status": "pass",
+          "reason": "Compared supplied counter"
+        },
+        {
+          "criterion": "all_phrases",
+          "observed": "Everything is working.",
+          "rule": [
+            "need a tool"
+          ],
+          "status": "fail",
+          "reason": "Absent from complete text"
+        }
+      ],
+      "classification": "rejected"
+    },
+    {
+      "query_id": "tools",
+      "result_id": "e",
+      "source": {
+        "query_id": "tools",
+        "result_id": "e",
+        "url": "https://example.org/posts/e",
+        "text": "Here is a preview...",
+        "text_complete": false,
+        "likes": 120,
+        "likes_observed_at": "2026-10-29T12:00:00Z"
+      },
+      "criteria": [
+        {
+          "criterion": "min_likes",
+          "observed": 120,
+          "rule": 100,
+          "status": "pass",
+          "reason": "Compared supplied counter"
+        },
+        {
+          "criterion": "all_phrases",
+          "observed": "Here is a preview...",
+          "rule": [
+            "need a tool"
+          ],
+          "status": "unknown",
+          "reason": "Absent from excerpt"
+        }
+      ],
+      "classification": "unverifiable"
+    },
+    {
+      "query_id": "tools",
+      "result_id": "f",
+      "source": {
+        "query_id": "tools",
+        "result_id": "f",
+        "url": "https://example.org/posts/f",
+        "text": "I need a tool.",
+        "text_complete": true
+      },
+      "criteria": [
+        {
+          "criterion": "min_likes",
+          "observed": null,
+          "rule": 100,
+          "status": "unknown",
+          "reason": "Counter unavailable"
+        },
+        {
+          "criterion": "all_phrases",
+          "observed": "I need a tool.",
+          "rule": [
+            "need a tool"
+          ],
+          "status": "pass",
+          "reason": "Phrase present"
+        }
+      ],
+      "classification": "unverifiable"
+    }
+  ],
+  "summary": {
+    "accepted": 2,
+    "rejected": 2,
+    "unverifiable": 2
+  }
+}

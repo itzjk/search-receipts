@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "queries": {
+    "tools": {
+      "description": "Synthetic request search; original query is only a label",
+      "min_likes": 100,
+      "all_phrases": ["need a tool"]
+    },
+    "notes": {
+      "min_likes": 0,
+      "any_phrases": ["offline", "local"]
+    }
+  }
+}
