@@ -77,7 +77,11 @@ Exit codes are additive flags: `1` means rejected rows, `2` means unknown criter
 
 ## Contributing
 
-From a clone, install with `pipx install .`; run `python -m unittest discover -s tests -v` after installing the package in your Python environment with `python -m pip install .`.
+From a clone, install the CLI with `pipx install .`. To install and test in your active Python environment, run:
+
+```sh
+python -m pip install . && python -m unittest discover -s tests -v
+```
 
 ## License
 

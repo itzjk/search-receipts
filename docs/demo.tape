@@ -16,10 +16,10 @@ Enter
 Type `clear`
 Enter
 Sleep 500ms
-Show
 Type `search-receipts demo --out demo-report.json`
 Enter
 Wait+Screen /Exit 3/
+Show
 Sleep 5s
 Type `jq '.rows[4].criteria[1] | {status, reason, observed}' demo-report.json`
 Enter
